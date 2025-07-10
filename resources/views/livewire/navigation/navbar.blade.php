@@ -48,8 +48,6 @@
         </div>
     </div>
 
-    {{-- @livewire('sidebar') --}}
-
     <div id="sidebar"
         class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
         <div class="p-4 border-b flex justify-between items-center">

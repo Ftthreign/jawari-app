@@ -7,7 +7,7 @@
 
     <title>JAWARI</title>
 
-    <!-- Fonts -->
+    {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,7 @@
 
     <link rel="icon" href="{{ asset('jawari-logo.png') }}" type="image/png">
 
-    <!-- Styles / Scripts -->
+    {{-- Styles / Scripts --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 
@@ -34,8 +34,13 @@
     <div class="border-t border-gray-300 my-24 mx-96"></div>
 
     @livewire('home.content')
+    @livewire('home.article')
+    @livewire('home.gallery')
+    @livewire('home.footer')
 
     @livewireScripts
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 </body>
 
 </html>

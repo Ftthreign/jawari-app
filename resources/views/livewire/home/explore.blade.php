@@ -1,7 +1,7 @@
 <section class="container mx-auto py-16 px-4 my-8 md:my-2">
     <div class="flex flex-col md:flex-row items-center md:items-center gap-12 md:gap-16">
         <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            <h2 class="text-3xl md:text-4xl font-bold font-display text-gray-800 mb-2">
                 Eksplor Budaya Banten <span class="text-gray-500">—</span>
             </h2>
             <p class="text-lg text-gray-600 mb-6">

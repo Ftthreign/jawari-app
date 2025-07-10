@@ -19,6 +19,8 @@ export default {
         primary: '#B33D24',
         lowPrimary: '#B33D2480',
         secondary: '#8f2d1e',
+        secondaryBackground: '#D9D9D9',
+        contentTextDisplay: '#595959',
       },
     },
   },
