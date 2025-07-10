@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('kesenian', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constraint()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('judul', 100);
             $table->string('sub_judul', 100);
+            $table->integer('views')->default(0);
             $table->text('deskripsi');
             $table->string('banner_image');
             $table->string('link_youtube')->nullable();
