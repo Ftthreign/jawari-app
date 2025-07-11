@@ -113,7 +113,6 @@ class ArtikelController extends Controller
      */
         public function destroy(Artikel $artikel)
     {
-        // Panggil otorisasi. Jika gagal, Laravel akan otomatis melempar 403 Forbidden.
         $this->authorize('delete', $artikel);
 
         if ($artikel->file_path) {
