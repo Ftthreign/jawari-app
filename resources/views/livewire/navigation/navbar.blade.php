@@ -8,13 +8,13 @@
         <!-- Navigation Links -->
         <ul class="hidden md:flex space-x-8">
             <li>
-                <a href="#" wire:click.prevent="setActiveLink('Beranda')"
+                <a href="{{ route('home') }}" wire:click="setActiveLink('Beranda')"
                     class="hover:text-lowPrimary text-base {{ $activeLink == 'Beranda' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'font-semibold' }}">
                     Beranda
                 </a>
             </li>
             <li>
-                <a href="#tentang" wire:click.prevent="setActiveLink('Tentang Kami')"
+                <a href="{{ route('about') }}" wire:click="setActiveLink('Tentang Kami')"
                     class="hover:text-lowPrimary text-base {{ $activeLink == 'Tentang Kami' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'font-semibold' }}">
                     Tentang Kami
                 </a>

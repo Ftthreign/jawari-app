@@ -1,6 +1,5 @@
 <section class="bg-white py-16 px-4">
     <div class="max-w-7xl mx-auto">
-        {{-- Judul --}}
         <div class="text-center mb-10">
             <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
                 Galeri Budaya Banten <span class="text-red-700">—</span>
@@ -37,9 +36,8 @@
             </div>
         </div>
 
-        {{-- Tombol Selengkapnya --}}
         <div class="text-center mt-10">
-            <a href="#" class="bg-red-700 hover:bg-red-800 text-white text-sm px-6 py-2 rounded-full transition">
+            <a href="#" class="bg-primary hover:bg-red-800 text-white text-sm px-4 py-4 rounded-full transition">
                 selengkapnya
             </a>
         </div>

@@ -24,23 +24,8 @@
 
 <body class="font-sans antialiased scroll-smooth">
 
-    @livewire('navigation.navbar', ['activeLink' => 'Beranda'])
+    @livewire('navigation.navbar', ['activeLink' => 'Tentang Kami'])
     @livewire('home.header')
-
-    <div class="border-t border-gray-300 my-24 mx-96"></div>
-
-    @livewire('home.explore')
-
-    <div class="border-t border-gray-300 my-24 mx-96"></div>
-
-    @livewire('home.content')
-    @livewire('home.article')
-    @livewire('home.gallery')
-    @livewire('home.footer')
-
-    @livewireScripts
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
 </body>
 
 </html>

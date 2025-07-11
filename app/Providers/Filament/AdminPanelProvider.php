@@ -17,9 +17,27 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Navigation\NavigationGroup;
+use Filament\Navigation\NavigationItem;
 
 class AdminPanelProvider extends PanelProvider
 {
+    public function navigation(): array
+    {
+        return [
+            NavigationGroup::make('Konten')
+                ->items([
+                    NavigationItem::make('Artikel')
+                        ->url(fn() => route('filament.admin.resources.artikels.index'))
+                        ->icon('heroicon-o-document-text'),
+
+                    NavigationItem::make('Galeri')
+                        ->url(fn() => route('filament.admin.resources.galeris.index'))
+                        ->icon('heroicon-o-photo'),
+                ]),
+        ];
+    }
+
     public function panel(Panel $panel): Panel
     {
         return $panel
