@@ -121,7 +121,7 @@ class KesenianController extends Controller
      */
     public function destroy(Kesenian $kesenian)
     {
-        $this->authorize('delete', $artikel);
+        $this->authorize('delete', $kesenian);
         
         if ($kesenian->banner_image) {
             Storage::disk('public')->delete($kesenian->banner_image);
