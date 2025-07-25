@@ -1,5 +1,5 @@
 <div class="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
-    <img src="{{ asset('assets/header-image.png') }}" alt="Hero Image - Rangkang Jawari"
+    <img src="{{ asset('assets/header-image.webp') }}" alt="Hero Image - Rangkang Jawari"
         class="absolute inset-0 w-full h-full object-cover object-center">
 
     <div class="absolute inset-0 bg-black bg-opacity-20"></div>

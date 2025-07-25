@@ -2,25 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\KesenianResource\Pages\{
-    CreateKesenian,
-    EditKesenian,
-    ListKesenians
-};
+use App\Filament\Resources\KesenianResource\Pages\{CreateKesenian, EditKesenian, ListKesenians};
+use Filament\Forms\Components\{TextInput, FileUpload, Grid, Hidden, MarkdownEditor, Radio, View};
+use Filament\Tables\Actions\{EditAction, DeleteAction, BulkActionGroup, DeleteBulkAction};
 use App\Models\Kesenian;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\Hidden;
 use Illuminate\Support\Str;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Radio;
 use Illuminate\Support\Facades\Auth;
-use Filament\Tables\Actions\{EditAction, DeleteAction, BulkActionGroup, DeleteBulkAction};
 
 class KesenianResource extends Resource
 {
@@ -60,9 +51,23 @@ class KesenianResource extends Resource
                     ->maxLength(100),
             ]),
 
-            MarkdownEditor::make('deskripsi')
-                ->label('Deskripsi')
-                ->required()
+            Grid::make()
+                ->columns(2)
+                ->schema([
+                    MarkdownEditor::make('deskripsi')
+                        ->label('Deskripsi')
+                        ->live(true)
+                        ->required()
+                        ->columnSpan(1),
+
+                    View::make('livewire.components.markdown-preview')
+                        ->label('Preview')
+                        ->visible(fn($get) => filled($get('deskripsi')))
+                        ->viewData(fn($get) => [
+                            'html' => Str::markdown($get('deskripsi')),
+                        ])
+                        ->columnSpan(1),
+                ])
                 ->columnSpanFull(),
 
             Radio::make('tipe_banner')

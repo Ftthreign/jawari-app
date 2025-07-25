@@ -6,12 +6,13 @@ use App\Filament\Resources\ArtikelResource\Pages\{CreateArtikel, EditArtikel, Li
 use App\Models\Artikel;
 use Filament\Resources\Resource;
 use Filament\Forms\Form;
-use Filament\Forms\Components\{TextInput, FileUpload, Hidden};
+use Filament\Forms\Components\{TextInput, FileUpload, Hidden, View, Grid};
 use Filament\Tables\Table;
 use Filament\Tables\Actions\{EditAction, DeleteBulkAction, BulkActionGroup, DEleteAction};
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Facades\Auth;
 use Filament\Forms\Components\MarkdownEditor;
+use Illuminate\Support\Str;
 
 class ArtikelResource extends Resource
 {
@@ -54,9 +55,23 @@ class ArtikelResource extends Resource
                     ->url()
                     ->nullable(),
 
-                MarkdownEditor::make('deskripsi')
-                    ->label('Deskripsi Artikel')
-                    ->required()
+                Grid::make()
+                    ->columns(2)
+                    ->schema([
+                        MarkdownEditor::make('deskripsi')
+                            ->label('Deskripsi Artikel')
+                            ->live(true)
+                            ->required()
+                            ->columnSpan(1),
+
+                        View::make('livewire.components.markdown-preview')
+                            ->label('Preview')
+                            ->visible(fn($get) => filled($get('deskripsi')))
+                            ->viewData(fn($get) => [
+                                'html' => Str::markdown($get('deskripsi')),
+                            ])
+                            ->columnSpan(1),
+                    ])
                     ->columnSpanFull(),
             ]);
     }
