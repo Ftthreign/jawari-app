@@ -8,10 +8,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\{TextColumn, ImageColumn, IconColumn};
 use Filament\Tables\Table;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
+use Filament\Forms\Components\{Textarea, Toggle, FileUpload, Select};
 use Filament\Tables\Actions\{EditAction, DeleteAction, BulkActionGroup, DeleteBulkAction};
 use Illuminate\Support\Facades\Auth;
 

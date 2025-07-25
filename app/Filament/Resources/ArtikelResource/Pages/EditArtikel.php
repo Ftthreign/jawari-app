@@ -3,9 +3,8 @@
 namespace App\Filament\Resources\ArtikelResource\Pages;
 
 use App\Filament\Resources\ArtikelResource;
-use Filament\Actions\DeleteAction;
+use Filament\Actions\{DeleteAction, Action};
 use Filament\Resources\Pages\EditRecord;
-use Filament\Actions\Action;
 use Illuminate\Support\Js;
 
 class EditArtikel extends EditRecord

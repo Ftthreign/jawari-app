@@ -4,9 +4,8 @@ namespace App\Filament\Resources\GaleriResource\Pages;
 
 use App\Filament\Resources\GaleriResource;
 use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\{Storage, Auth};
 use Intervention\Image\ImageManager;
-use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Drivers\Gd\Driver;
 use Filament\Actions\Action;
 use Illuminate\Support\Js;

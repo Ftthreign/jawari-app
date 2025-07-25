@@ -9,9 +9,8 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\{EditAction, DeleteAction, BulkActionGroup, DeleteBulkAction};
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Hash;
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\{TextInput, Select};
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\Select;
 use Illuminate\Support\Facades\Auth;
 
 

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Support\Str;
-use App\Models\{Artikel, Galeri, Kesenian};
+use App\Models\{Artikel, Kesenian};
 
 Route::get('/', fn() => view('pages.home'))->name('home');
 Route::get('/about', fn() => view('pages.about'))->name('about');

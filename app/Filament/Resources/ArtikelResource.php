@@ -3,15 +3,14 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArtikelResource\Pages\{CreateArtikel, EditArtikel, ListArtikels};
+use Filament\Forms\Components\{TextInput, FileUpload, Hidden, View, Grid, MarkdownEditor};
+use Filament\Tables\Actions\{EditAction, DeleteBulkAction, BulkActionGroup, DEleteAction};
 use App\Models\Artikel;
 use Filament\Resources\Resource;
 use Filament\Forms\Form;
-use Filament\Forms\Components\{TextInput, FileUpload, Hidden, View, Grid};
 use Filament\Tables\Table;
-use Filament\Tables\Actions\{EditAction, DeleteBulkAction, BulkActionGroup, DEleteAction};
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Facades\Auth;
-use Filament\Forms\Components\MarkdownEditor;
 use Illuminate\Support\Str;
 
 class ArtikelResource extends Resource
