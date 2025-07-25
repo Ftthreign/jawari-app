@@ -35,7 +35,8 @@
                         Your browser does not support the video tag.
                     </video>
                 @else
-                    <img src="{{ asset('storage/' . $selectedGaleri->file_path) }}" class="w-full h-auto mb-4 rounded"
+                    <img src="{{ asset('storage/' . $selectedGaleri->file_path) }}"
+                        class="w-full h-auto max-h-[80vh] object-contain mb-4 rounded"
                         alt="Detail Foto {{ $selectedGaleri->deskripsi ?? 'Galeri' }}" />
                 @endif
                 <p class="text-sm text-gray-600">{{ $selectedGaleri->created_at->translatedFormat('d F Y') }}</p>

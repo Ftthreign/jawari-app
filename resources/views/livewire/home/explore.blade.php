@@ -17,7 +17,7 @@
 
         <div class="relative w-[345px] h-[400px] mx-auto">
             <div class="bg-[#FBF0DB] rounded-2xl shadow w-full h-full flex items-center justify-center">
-                <img src="{{ asset('assets/explore-section.png') }}" alt="Banten Culture Icons"
+                <img src="{{ asset('assets/explore-section.webp') }}" alt="Banten Culture Icons"
                     class="w-[320px] h-[320px] object-contain">
             </div>
 

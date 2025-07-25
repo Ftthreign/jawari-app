@@ -7,7 +7,7 @@
     @livewire('components.header', [
         'title' => 'Galeri',
         'subtitle' => 'Mengabadikan budaya lewat sorotan lensa',
-        'imgPath' => asset('assets/header-gallery.png'),
+        'imgPath' => asset('assets/header-gallery.webp'),
     ])
     @livewire('galeri.content', ['selectedGaleri' => $selectedGaleri ?? null])
 @endsection

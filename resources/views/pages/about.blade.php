@@ -7,7 +7,7 @@
     @livewire('components.header', [
         'title' => 'Visi Misi',
         'subtitle' => 'Visi Misi Kesenian Banten',
-        'imgPath' => asset('assets/visi-misi-header-image.jpg'),
+        'imgPath' => asset('assets/visi-misi-header-image.webp'),
     ])
     @livewire('about.content')
 
