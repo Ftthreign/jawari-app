@@ -27,7 +27,7 @@ Sebagai wisatawan, menyaksikan tarian ini secara langsung memberi pengalaman yan
 Tarian-tarian ini biasanya dipertunjukkan dalam festival daerah, acara penyambutan tamu, atau pada perayaan adat dan keagamaan. Saat berkunjung ke Banten, sempatkan waktu untuk menyaksikan penampilan seni tradisional ini—baik di kota Serang, Pandeglang, maupun kawasan wisata budaya lainnya. Ini adalah kesempatan langka untuk melihat langsung bagaimana nilai-nilai lokal dijaga melalui seni yang penuh harmoni.
 
 Melalui pelestarian seni tari, masyarakat Banten menunjukkan bahwa budaya bukanlah sesuatu yang statis, tapi tumbuh bersama zaman. Bagi Anda yang ingin mengenal Banten lebih dalam, tarian tradisionalnya adalah gerbang yang memukau—sebuah cara untuk memahami jiwa masyarakat lokal tanpa perlu banyak kata. Sebab di sini, budaya benar-benar bisa berbicara lewat gerakan.',
-            'banner_image' => null,
+            'banner_image' => 'gambar/galeri-14.webp',
             'link_youtube' => null,
         ]);
 
