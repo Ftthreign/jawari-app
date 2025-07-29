@@ -14,21 +14,7 @@ class GaleriSeeder extends Seeder
     public function run(): void
     {
         $adminUserId = \App\Models\User::where('email', 'admin@serangkab.go.id')->first()->id;
-        $gambar = [
-            'galeri-1.webp',
-            'galeri-2.webp',
-            'galeri-3.webp',
-            'galeri-4.webp',
-            'galeri-5.webp',
-            'galeri-6.webp',
-            'galeri-7.webp',
-            'galeri-8.webp',
-            'galeri-9.webp',
-            'galeri-11.webp',
-            'galeri-12.webp',
-            'galeri-13.webp',
-            'galeri-14.webp',
-        ];
+        $gambarPath = storage_path('app/public/gambar');
 
         $deskripsi = [
             "Para penari menampilkan gerakan yang anggun dan penuh makna dalam Lomba Tari Klasik Walijamaliha.",
@@ -40,19 +26,24 @@ class GaleriSeeder extends Seeder
             "Gerakan kompak para penari yang menciptakan harmoni visual yang menakjubkan.",
             "Momen di belakang panggung, para peserta mempersiapkan diri sebelum tampil.",
             "Salah satu penari cilik dengan kostum lengkap, siap untuk menunjukkan kebolehannya.",
+            "Keindahan dan kekayaan budaya Banten yang direpresentasikan melalui seni tari.",
             "Penampilan energik dari grup tari modern yang turut memeriahkan acara.",
             "Pemenang lomba berfoto bersama dengan para juri dan panitia.",
             "Wawancara dengan salah satu peserta mengenai persiapannya mengikuti lomba.",
             "Potret salah satu penari dengan riasan wajah khas yang menawan."
         ];
 
-        foreach ($gambar as $key => $fileName) {
-            Galeri::create([
-                'user_id' => $adminUserId,
-                'file_path' => 'gambar/' . $fileName,
-                'deskripsi' => $deskripsi[$key] ?? 'Deskripsi untuk gambar ' . ($key + 1),
-                'status' => true,
-            ]);
+        if (File::isDirectory($gambarPath)) {
+            $files = File::files($gambarPath);
+
+            foreach ($files as $key => $file) {
+                Galeri::create([
+                    'user_id' => $adminUserId,
+                    'file_path' => 'gambar/' . $file->getFilename(),
+                    'deskripsi' => $deskripsi[$key] ?? 'Deskripsi untuk gambar ' . ($key + 1),
+                    'status' => true,
+                ]);
+            }
         }
     }
 }
