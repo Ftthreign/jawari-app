@@ -81,8 +81,10 @@
             </button>
         </div>
         <ul class="flex flex-col space-y-4 p-4">
-            <li><a href="#" class="text-base font-semibold hover:text-primary">Beranda</a></li>
-            <li><a href="#tentang" class="text-base font-semibold hover:text-primary">Tentang Kami</a></li>
+            <li><a href="{{ route('home') }}" wire:click="setActiveLink('Beranda')"
+                    class="text-base font-semibold hover:text-primary">Beranda</a></li>
+            <li><a href="{{ route('about') }}" wire:click="setActiveLink('Tentang Kami')"
+                    class="text-base font-semibold hover:text-primary">Tentang Kami</a></li>
 
             <li>
                 <button id="toggleDropdownMobile"

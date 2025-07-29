@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArtikelResource\Pages\{CreateArtikel, EditArtikel, ListArtikels};
 use Filament\Forms\Components\{TextInput, FileUpload, Hidden, View, Grid, MarkdownEditor};
-use Filament\Tables\Actions\{EditAction, DeleteBulkAction, BulkActionGroup, DEleteAction};
+use Filament\Tables\Actions\{EditAction, DeleteBulkAction, BulkActionGroup, DeleteAction};
 use App\Models\Artikel;
 use Filament\Resources\Resource;
 use Filament\Forms\Form;
