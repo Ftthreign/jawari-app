@@ -16,7 +16,7 @@
     @livewire('components.header', [
         'title' => $headerTitle,
         'subtitle' => 'Tarian tak hanya gerak, tapi kisah yang dituturkan turun-temurun',
-        'imgPath' => $kesenian->banner_image ? asset('storage/' . $kesenian->banner_image) : asset('assets/header-sejarah-tari.png'),
+        'imgPath' => $kesenian->banner_image ? asset('storage/' . $kesenian->banner_image) : asset('assets/header-sejarah-tari.webp'),
     ])
     @livewire('kesenian.content-kesenian', [
         'judul' => $kesenian->judul,
