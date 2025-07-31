@@ -95,3 +95,11 @@ Follow these steps to get the application running on your local machine:
 
 7.  **Access the Application:**
     Once the servers are running, you can access the application in your web browser, usually at `http://127.0.0.1:8000`.
+
+## Contributor
+
+| Name                    | Role                   | GitHub                                     |
+| ----------------------- | ---------------------- | ------------------------------------------ |
+| M. Arifin Syam          | Backend Developer      | [@aku-mars](https://github.com/aku-mars)   |
+| Fadhil Abdul Fattah     | Frontend Developer     | [@Ftthreign](https://github.com/Ftthreign) |
+| Arya Dila Citra Permata | Code Reviewer & Mentor | [@aryadilas](https://github.com/aryadilas) |
