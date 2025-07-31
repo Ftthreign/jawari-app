@@ -3,8 +3,8 @@
         {{-- Tentang Kami --}}
         <div>
             <h3 class="text-primary font-bold mb-3">Tentang Kami</h3>
-            <p class="text-sm mb-7 text-contentTextDisplay">Universitas Sultan Ageng Tirtayasa</p>
             <p class="text-sm mb-4 text-contentTextDisplay">Dinas Kepemudaan, Olahraga dan Pariwisata</p>
+            <p class="text-sm mb-7 text-contentTextDisplay">Universitas Sultan Ageng Tirtayasa</p>
             <p class="text-xs text-contentTextDisplay hover:text-gray-600">
                 Copyright © 2025 - Dinas Komunikasi, Informatika, Persandian dan Statistik - Kabupaten Serang. All
                 rights reserved.
